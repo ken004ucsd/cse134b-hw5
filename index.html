@@ -5,44 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenny Nguyen</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/624ee0938f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <header>
-            <nav>
-                <a href="index.html">Home</a> 
-                <a href="about.html">About Me</a> 
-                <a href="skills.html">Skills</a> 
-                <a href="projects.html">Projects</a> 
-                <a href="contact.html">Contact</a> 
-                <a href="lab.html">Lab</a> 
+            <nav id="nav">
+                <a href="#nav">Home</a> 
+                <a href="#about">About</a>
+                <a href="#skills-header">Projects</a> 
+                <a href="#contact">Contact</a> 
             </nav>
+            <section id="home-intro">
+                    <h1>Hey, I am <span> Kenny Nguyen! </span> </h1>
+                    <h3 class="typing-text"> Passionate about <span> </span></h3>
+                    <aside class="social-links">
+                        <a href="https://www.linkedin.com/in/k-nguyen-807612314" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ken004ucsd/" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </aside>
+            </section>
+
+            <audio controls autoplay loop>
+                <source src="/resources/wobble-286280.mp3" type="audio/mpeg">
+            </audio>
+
     </header>
 
-
     <main>
-        <div class="intro-container">
-            <h1>Hey, I am Kenny! </h1>
+        <!-----------About Section-------------->            
+        <section id="about">
+            <article class="row">
+                <picture class="about-col-1">
+                    <img src="images/placement.png" alt="Kenny Nguyen" loading="lazy">
+                    <figcaption style="font-size: 0.8vw; margin-left: 2vw;">
+                        This is not an image of me. This is a picture I pulled from <br><cite> https://www.freepik.com</cite>
+                    </figcaption>
+                    
+                </picture>
+                <article class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>I am an aspiring Software Engineer with a passion for learning, design, and coding.</p>
+        
+                    <p>Design has been at the core of everything I do, whether it's crafting spactial experiences,
+                        creating digital content that resonates with people, or coding a passion project of mine. I
+                        love exploring how design shapes our daily lives.
+                    </p>
+                        <h2>Education</h2>
+                    <ul>
+                        <li><span>University of California, San Diego</span><br> Bachelors of Science in Computer Scienece</li>
+                    </ul>
+                </article>
+            </article>
+        </section>
+
+        <!-----------Skills-------------->  
+        <h1 id="skills-header">What I've Worked With!</h1>
+        
+        <div class="scroller">
+            <ul class="skills-list scroller_inner">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>UI/UX</li>
+                <li>webdev</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>MongoDB</li>
+                <li>Docker</li>
+                <li>Verilog</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>UI/UX</li>
+                <li>webdev</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>MongoDB</li>
+                <li>Docker</li>
+                <li>Verilog</li>
+            </ul>
         </div>
 
-        <img src="images/placement.jpg" alt="Kenny Nguyen">
+        <!-----------Projects--------------> 
 
-        <div class="social-links">
-            <p>
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-                </a>
-                <a href="https://github.com/yourgithub" target="_blank">
-                </a>
-            </p>
-        </div>
+        <section id="projects">
+                <article id="pantrypal">
+                    <picture class="image-wrapper">
+                        <img class="project-img" src="images/food-display.jpg" alt="PantryPal" loading="lazy">
+                    </picture>
+                    <div id="pantrypal-content">
+                        <h1> PantryPal</h1>
+                        <h2> Full Stack App Development</h2>
+                        <p>
+                            An application to help users find recipes based on available ingredients.
+                        </p> 
+                    </div>
+                </article>
+                
+                    
+                <article id="pacific-links">
+                    <picture class="image-wrapper">
+                        <img class="project-img" src="images/pacific-links.png" alt="PAXU:Building Bridges" loading="lazy">
+                    </picture>
+                    <div id="pacific-links-content">
+                        <h1> Pacific Links Outreach</h1>
+                        <h2> Web & UI/UX Design</h2>
+                        <p>
+                            A website developed in collaboration with Pacific Links Foundation to provide culturally sensitive educational resources and mental health support
+                                for vulnerable Vietnamese communities.
+                        </p>
+                    </div>
+                </article>                           
+        </section>
+
+        <!-----------Contact--------------> 
+        
+        <section id="contact">
+            <div class="row">
+                <article class="contact-col-1">
+                    <h1>Contact Me</h1>
+                    <address>
+                        <a href="mailto:ken004@ucsd.edu">
+                            <i class="fa-solid fa-envelope"></i>
+                            <text id="contacts"> ken004@ucsd.edu </text>
+                        </a>
+                    </address>
+                    <address> 
+                        <a href="tel:858-555-555"> 
+                            <i class="fa-solid fa-phone"></i>
+                            <text id="contacts"> 1-(858)-555-5555 </text>
+                        </a>
+                    </address>
+
+                     <button> <a href="/cse134b-hw3/resources/RESUME.pdf" download >Download CV</a> </button>
+                </article>
+
+                <form class="contact-form">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" id="" rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <h1>Thanks For Visiting!</h1>
+            <p>&copy; 2025 Kenny Nguyen. All rights reserved.</p>
+        </footer>
+
     </main>
 
-    <hr>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2025 Kenny Nguyen</p>
-        </div>
-    </footer>
+
+
+
+
 </body>
 </html>
