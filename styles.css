@@ -1,523 +1,523 @@
- /* -----------General Formatting----------- */
+  /* -----------General Formatting----------- */
 
-:root{
-  --primary-color: #6495ED;
-  --secondary-color: #ffff;
-  --font-size: 1rem;
-}
-
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Comfortaa', Trebuchet MS;
-  font-weight: 600;
-  color:  var(--primary-color, color(display-p3 0.392 0.584 0.929));
-}
-
-audio{
-  display: none;
-}
-
-button {
-  display: block;
-  margin: 8% auto;
-  border: 2px solid cornflowerblue;
-  padding: 1.5% 4%;
-  border-radius: 6px;
-  font-size: 3dwh;
-  color: var(--primary-color, cornflowerblue);
-  background-color: var(--secondary-color, white);
-  transition: 0.5s;
-
-  a {
-    text-decoration: none;
-    display: inline-block;
-    color: inherit;
+  :root{
+    --primary-color: #6495ED;
+    --secondary-color: #ffff;
+    --font-size: 1rem;
   }
 
-  &:hover {
-    background: var(--primary-color, cornflowerblue);
-    color: var(--secondary-color, white);
-    animation: jiggle 3s ease-in-out infinite;
-  }
-}
-
-@keyframes jiggle {
-  0%, 100% { transform: translateX(0); }
-  5% { transform: translateX(-20px) rotate(-5deg); }
-  10% { transform: translateX(10px) rotate(5deg); }
-  15% { transform: translateX(-5px) rotate(-2deg); }
-  30% { transform: translateX(0px); }
-  40% { transform: translateX(5px) rotate(5deg); }
-  55% { transform: translateX(-10px) rotate(0deg); }
-  60% { transform: translateX(0px) rotate(-2deg); }
-  65% { transform: translateX(15px); }
-  75% { transform: translateX(-10px) rotate(-5deg); }
-  80% { transform: translateX(10px) rotate(5deg); }
-}
-
-
-html{
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-body{
-  margin: 0;
-  display: flex;
-  flex-direction: column; 
-  background-color: var(--secondary-color, white);
-  color: var(--primary-color, cornflowerblue);
-  width: 100%;
-  cursor: url('resources/cursor.cur'), auto;
-}
-
-section{
-  display: inline-block;
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
-  gap: 15%;
-}
-
-.row{
-  display: flex;
-  gap: 10%;
-  width: 100dvw;
-
-}
-
-header{
-  width: 100dvw;
-  height: 100dvh;
-  background-image: url(images/rabbit\ wallpaper-pc.JPG);
-  background-position: center;
-  background-size: cover;
-  color:var(--secondary-color, white);
-}
-
-/* -----------Navigation Bar----------- */
-
-nav {
-  width: 100%;
-  height: 5vh;
-  text-align: right;
-  font-size: 1.5vw;
-  font-weight: 600;
-  padding: 2%;
-  white-space: nowrap;
-
-  a {
-    color: var(--secondary-color, white);
-    text-decoration: none;
-    margin: 1vw;
-
-    &:hover {
-      padding: 0.5dvw;
-      border-bottom: 5px solid var(--primary-color, cornflowerblue);
-      color: var(--primary-color, cornflowerblue);
-      font-size: larger;
-      font-weight: bold;
-      transform: scale(1.05);
-      transition: 0.3s;
-    }
-  }
-}
-
-/* -----------Intro Home Page----------- */
-
-#home-intro:has(h1){
-  margin-top: 25dvh;
-  margin-left: 10vw;
-}
-
-#home-intro h1{
-  font-size: 4.5vw;
-  font-weight: 900;
-}
-
-span {
-  color: var(--primary-color, cornflowerblue);
-  font-weight: bolder;
-}
-
-#home-intro h3{
-  display: flex;
-  margin: 1% 1.5% 0% 0.5%;
-  font-size: 2.5vw;
-}
-
-.typing-text span{
-  position: relative;
-  margin-left: 2%;
-}
-
-.typing-text span::before{
-  content: "";
-  color: var(--secondary-color, white);
-  animation: words 10s infinite;
-}
-
-.typing-text span::after{
-  content:"";
-  position: absolute;
-  height: 100%;
-  right: -8px; 
-  border-left: 3px solid var(--secondary-color, white);
-  animation: cursor 1.2s steps(1) infinite;
-}
-
-@keyframes cursor{
-  50%{
-    border-left-color: transparent;
-  }
-}
-
-@keyframes words {
-  0%, 20%{
-    content: "Software ";
-  }
-  21%, 40%{
-    content: "Design";
-  }
-  41%, 60%{
-    content: "Web Dev";
-  }
-  61%, 80%{
-    content: "Art";
-  }
-  81%, 100%{
-    content: "Learning";
-  }
-}
-
-.social-links{
-  display: inline-flex;
-  gap: 2vw;
-  justify-content: center;
-  align-items: center;
-  width: 2vw;
-  height: auto;
-  background-color: transparent;
-  font-size: 2vw;
-  margin: 4vh 4vw;
-  
-
-  i{
-    color: var(--secondary-color,white);
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', Trebuchet MS;
+    font-weight: 600;
+    color:  var(--primary-color, color(display-p3 0.392 0.584 0.929));
   }
 
-  i:hover{
-      color: var(--primary-color, cornflowerblue);
-      font-size: larger;
-      font-weight: bold;
-      transform: scale(1.05);
-      transition: 0.5s;
-  }
-}
-
-
-/* -----------About Me----------- */
-
-#about{
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 10%;
-  width: 100dvw;
-  background-image: url(images/bunny_helene1.png);
-  background-position: center;
-  background-size: cover;
-}
-
-
-.about-col-1 img{
-  width: 25vw;
-  height: auto;
-  border-radius: 20%;
-}
-
-.about-col-1 figcaption{
-  align-items: center;
-  color: var(--primary-color, cornflowerblue);
-}
-
-.about-col-2 {
-  flex-basis: 40%;
-  color: var(--primary-color, cornflowerblue);
-  margin-top: 8%;
-
-  h1 {
-    font-size: 3vw;
-    font-weight: 800;
-    margin-bottom: 2%;
+  audio{
+    display: none;
   }
 
-  p {
-    font-size: 1vw;
-    margin-bottom: 3%;
-  }
-
-  h2 {
-    font-size: 1.5vw;
-    font-weight: 800;
-    margin-bottom: 1%;
-  }
-
-  ul {
-    list-style: none;
-
-    li {
-      font-size: 0.75vw;
-    }
-  }
-}
-
-/* -----------Skills Section Head----------- */
-
-#skills-header{
-  display: flex;
-  justify-content: center;
-  font-size: 3vw;
-}
-
-/* -----------Skills Animation----------- */
-
-.skills-list{
-  list-style: none;
-  display: flex;
-}
-
-.skills-list li{
-  margin: 0vh .75vw;
-  padding: 1.5vw;
-  box-shadow: 0 0.5rem 1rem -0.25re, var(--secondary-color, white);
-  background: rgb(121, 146, 201);
-  color: var(--secondary-color, white);
-  display: flex;
-  border-radius: 15%;
-  font-size: 1.5vw;
-  border: 3px solid var(--primary-color, cornflowerblue);
-}
-
-.scroller{
-  max-width: 90dvw;
-  overflow: hidden;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 4%;
-  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
-  color:var(--secondary-color, white);
-}
-
-.scroller_inner{
-  width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll 30s linear infinite;
-  gap: 1rem;   /* critical value for animation calculation */
-}
-
-@keyframes scroll{
-  to {
-    transform: translate(calc(-50% - 0.5rem));
-  }
-}
-
-/* -----------Project----------- */
-
-#projects {
-  width: 100%;
-  margin-top: 5%;
-  justify-content: center;
-
-  h1 {
-    font-size: 2.5vw;
-    font-weight: bolder;
-    width: 40rem;
-    margin-bottom: 4%;
-  }
-
-  h2 {
-    font-size: 1.2vw;
-    font-weight: bold;
-    width: 40rem;
-    margin-bottom: 1%;
-  }
-
-  p {
-    font-size: 0.75vw;
-    max-width: 40rem;
-    word-wrap: break-word;
-  }
-
-  picture {
+  button {
     display: block;
-    border-radius: 10%;
-  }
-}
-
-.image-wrapper {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  border-radius: 10%;
-  width: 30%;
-  min-width: 30%;
-}
-
-.project-img{
-  width: 100%;  
-  height: auto; 
-  object-fit: contain;
-  display: block; 
-  border-radius: 10%;
-  
-}
-
-.project-img:hover{
-  transform: scale(1.15);
-  transition: transform 0.5s ease-in-out;
-}
-
-
-#pantrypal, #pacific-links{
-  display: flex;
-  gap:8%;
-  justify-content: left;
-  margin-bottom: 5%;
-  margin-left: 20%;
-}
-
-#pantrypal-content, #pacific-links-content{
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  max-width: 40%;
-}
-
-
-
-/* --------------- Contact ---------------------*/
-
-#contact{
-  margin: 0;
-  padding: 5%;
-  display: inline-block;
-  width: 100dvw;
-  height: 90dvh;
-  background-image: url(images/bird\ wallpaper\ pc.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color:var(--secondary-color, white);
-}
-
-
-.contact-col-1 {
-  display: flex;
-  flex-basis: 35%;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1vw;
-  justify-content: center;
-  margin-top: -5%;
-
-  h1 {
-    font-size: 3.5vw;
-    font-weight: bolder;
+    margin: 8% auto;
+    border: 2px solid cornflowerblue;
+    padding: 1.5% 4%;
+    border-radius: 6px;
+    font-size: 3dwh;
     color: var(--primary-color, cornflowerblue);
-    display: flex;
-    margin-bottom: 4%;
-  }
+    background-color: var(--secondary-color, white);
+    transition: 0.5s;
 
-  address {
-    align-self: baseline;
-    margin-left: 8%;
-    font-style: normal;
-    font-size: 1.5vw;
-    font-weight: 500;
-    padding: 2%;
-    
     a {
       text-decoration: none;
+      display: inline-block;
+      color: inherit;
     }
 
+    &:hover {
+      background: var(--primary-color, cornflowerblue);
+      color: var(--secondary-color, white);
+      animation: jiggle 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes jiggle {
+    0%, 100% { transform: translateX(0); }
+    5% { transform: translateX(-20px) rotate(-5deg); }
+    10% { transform: translateX(10px) rotate(5deg); }
+    15% { transform: translateX(-5px) rotate(-2deg); }
+    30% { transform: translateX(0px); }
+    40% { transform: translateX(5px) rotate(5deg); }
+    55% { transform: translateX(-10px) rotate(0deg); }
+    60% { transform: translateX(0px) rotate(-2deg); }
+    65% { transform: translateX(15px); }
+    75% { transform: translateX(-10px) rotate(-5deg); }
+    80% { transform: translateX(10px) rotate(5deg); }
+  }
+
+
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body{
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    background-color: var(--secondary-color, white);
+    color: var(--primary-color, cornflowerblue);
+    width: 100%;
+    cursor: url('resources/cursor.cur'), auto;
+  }
+
+  section{
+    display: inline-block;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+  }
+
+  .row{
+    display: flex;
+    gap: 10%;
+    width: 100dvw;
+
+  }
+
+  header{
+    width: 100dvw;
+    height: 100dvh;
+    background-image: url(images/rabbit\ wallpaper-pc.JPG);
+    background-position: center;
+    background-size: cover;
+    color:var(--secondary-color, white);
+  }
+
+  /* -----------Navigation Bar----------- */
+
+  nav {
+    width: 100%;
+    height: 5vh;
+    text-align: right;
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding: 2%;
+    white-space: nowrap;
+
+    a {
+      color: var(--secondary-color, white);
+      text-decoration: none;
+      margin: 1vw;
+
+      &:hover {
+        padding: 0.5dvw;
+        border-bottom: 5px solid var(--primary-color, cornflowerblue);
+        color: var(--primary-color, cornflowerblue);
+        font-size: larger;
+        font-weight: bold;
+        transform: scale(1.05);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  /* -----------Intro Home Page----------- */
+
+  #home-intro:has(h1){
+    margin-top: 25dvh;
+    margin-left: 10vw;
+  }
+
+  #home-intro h1{
+    font-size: 4.5vw;
+    font-weight: 900;
+  }
+
+  span {
+    color: var(--primary-color, cornflowerblue);
+    font-weight: bolder;
+  }
+
+  #home-intro h3{
+    display: flex;
+    margin: 1% 1.5% 0% 0.5%;
+    font-size: 2.5vw;
+  }
+
+  .typing-text span{
+    position: relative;
+    margin-left: 2%;
+  }
+
+  .typing-text span::before{
+    content: "";
+    color: var(--secondary-color, white);
+    animation: words 10s infinite;
+  }
+
+  .typing-text span::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    right: -8px; 
+    border-left: 3px solid var(--secondary-color, white);
+    animation: cursor 1.2s steps(1) infinite;
+  }
+
+  @keyframes cursor{
+    50%{
+      border-left-color: transparent;
+    }
+  }
+
+  @keyframes words {
+    0%, 20%{
+      content: "Software ";
+    }
+    21%, 40%{
+      content: "Design";
+    }
+    41%, 60%{
+      content: "Web Dev";
+    }
+    61%, 80%{
+      content: "Art";
+    }
+    81%, 100%{
+      content: "Learning";
+    }
+  }
+
+  .social-links{
+    display: inline-flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: auto;
+    background-color: transparent;
+    font-size: 2vw;
+    margin: 4vh 4vw;
+    
+
     i{
-      margin-right: 1dvw;
-      color: var(--primary-color, cornflowerblue);
-      font-size: 4vw;
+      color: var(--secondary-color,white);
     }
 
     i:hover{
-      margin-right: 1dvw;
-      color: var(--secondary-color, cornflowerblue);
-      font-size: 5vw;
-      font-weight: bold;
-      transform: scale(1.05);
-      transition: 0.2s;
+        color: var(--primary-color, cornflowerblue);
+        font-size: larger;
+        font-weight: bold;
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+  }
+
+
+  /* -----------About Me----------- */
+
+  #about{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    width: 100dvw;
+    background-image: url(images/bunny_helene1.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  .about-col-1 img{
+    width: 25vw;
+    height: auto;
+    border-radius: 20%;
+  }
+
+  .about-col-1 figcaption{
+    align-items: center;
+    color: var(--primary-color, cornflowerblue);
+  }
+
+  .about-col-2 {
+    flex-basis: 40%;
+    color: var(--primary-color, cornflowerblue);
+    margin-top: 8%;
+
+    h1 {
+      font-size: 3vw;
+      font-weight: 800;
+      margin-bottom: 2%;
     }
 
+    p {
+      font-size: 1vw;
+      margin-bottom: 3%;
+    }
+
+    h2 {
+      font-size: 1.5vw;
+      font-weight: 800;
+      margin-bottom: 1%;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 0.75vw;
+      }
+    }
   }
 
-  text {
+  /* -----------Skills Section Head----------- */
+
+  #skills-header{
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+  }
+
+  /* -----------Skills Animation----------- */
+
+  .skills-list{
+    list-style: none;
+    display: flex;
+  }
+
+  .skills-list li{
+    margin: 0vh .75vw;
+    padding: 1.5vw;
+    box-shadow: 0 0.5rem 1rem -0.25re, var(--secondary-color, white);
+    background: rgb(121, 146, 201);
     color: var(--secondary-color, white);
+    display: flex;
+    border-radius: 15%;
+    font-size: 1.5vw;
+    border: 3px solid var(--primary-color, cornflowerblue);
   }
-}
 
-.contact-form{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-basis: 55%;
-  margin-left: -10%;
-  margin-top: 2%;
-}
-
-form input, form textarea{
-  box-sizing: border-box;
-  resize: none;
-  width: 50dvw;
-  border: 0;
-  outline: none;
-  padding: 2dvh;
-  margin: 2dvh 0px;
-  color: var(--primary-color, cornflowerblue);
-  border-radius: 1cap;
-
-}
-
-form input::placeholder, form textarea::placeholder{
-  color: color(display-p3 0.3 0.6 1);
-  opacity: 50%;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-
-/*-------Footer------*/
-
-footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2%;
-  color: var(--secondary-color, white);
-  margin-top: 2%;
-  font-size: small;
-
-  p{
-    position: bottom;
+  .scroller{
+    max-width: 90dvw;
+    overflow: hidden;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 4%;
+    mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+    color:var(--secondary-color, white);
   }
-  
-}
+
+  .scroller_inner{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 30s linear infinite;
+    gap: 1rem;   /* critical value for animation calculation */
+  }
+
+  @keyframes scroll{
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  /* -----------Project----------- */
+
+  #projects {
+    width: 100%;
+    margin-top: 5%;
+    justify-content: center;
+
+    h1 {
+      font-size: 2.5vw;
+      font-weight: bolder;
+      width: 40rem;
+      margin-bottom: 4%;
+    }
+
+    h2 {
+      font-size: 1.2vw;
+      font-weight: bold;
+      width: 40rem;
+      margin-bottom: 1%;
+    }
+
+    p {
+      font-size: 0.75vw;
+      max-width: 40rem;
+      word-wrap: break-word;
+    }
+
+    picture {
+      display: block;
+      border-radius: 10%;
+    }
+  }
+
+  .image-wrapper {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 10%;
+    width: 30%;
+    min-width: 30%;
+  }
+
+  .project-img{
+    width: 100%;  
+    height: auto; 
+    object-fit: contain;
+    display: block; 
+    border-radius: 10%;
+    
+  }
+
+  .project-img:hover{
+    transform: scale(1.15);
+    transition: transform 0.5s ease-in-out;
+  }
+
+
+  #pantrypal, #pacific-links{
+    display: flex;
+    gap:8%;
+    justify-content: left;
+    margin-bottom: 5%;
+    margin-left: 20%;
+  }
+
+  #pantrypal-content, #pacific-links-content{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+  }
 
 
 
-/*-------Media------*/
+  /* --------------- Contact ---------------------*/
+
+  #contact{
+    margin: 0;
+    padding: 5%;
+    display: inline-block;
+    width: 100dvw;
+    height: 90dvh;
+    background-image: url(images/bird\ wallpaper\ pc.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:var(--secondary-color, white);
+  }
+
+
+  .contact-col-1 {
+    display: flex;
+    flex-basis: 35%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1vw;
+    justify-content: center;
+    margin-top: -5%;
+
+    h1 {
+      font-size: 3.5vw;
+      font-weight: bolder;
+      color: var(--primary-color, cornflowerblue);
+      display: flex;
+      margin-bottom: 4%;
+    }
+
+    address {
+      align-self: baseline;
+      margin-left: 8%;
+      font-style: normal;
+      font-size: 1.5vw;
+      font-weight: 500;
+      padding: 2%;
+      
+      a {
+        text-decoration: none;
+      }
+
+      i{
+        margin-right: 1dvw;
+        color: var(--primary-color, cornflowerblue);
+        font-size: 2em;
+      }
+
+      i:hover{
+        margin-right: 1dvw;
+        color: var(--secondary-color, cornflowerblue);
+        font-size: 2em;
+        font-weight: bold;
+        transform: scale(1.3);
+        transition: .5s;
+      }
+
+    }
+
+    text {
+      color: var(--secondary-color, white);
+    }
+  }
+
+  .contact-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 55%;
+    margin-left: -10%;
+    margin-top: 2%;
+  }
+
+  form input, form textarea{
+    box-sizing: border-box;
+    resize: none;
+    width: 50dvw;
+    border: 0;
+    outline: none;
+    padding: 2dvh;
+    margin: 2dvh 0px;
+    color: var(--primary-color, cornflowerblue);
+    border-radius: 1cap;
+
+  }
+
+  form input::placeholder, form textarea::placeholder{
+    color: color(display-p3 0.3 0.6 1);
+    opacity: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+
+  /*-------Footer------*/
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    color: var(--secondary-color, white);
+    margin-top: 2%;
+    font-size: small;
+
+    p{
+      position: bottom;
+    }
+    
+  }
 
 
 
-  
+  /*-------Media------*/
+
+
+
+    
