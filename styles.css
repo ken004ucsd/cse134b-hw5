@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI';
+}
+
+
+nav {
+  
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 24px;
+  background-color: #ffd497eb;
+}
+
+nav a {
+  color: #764427;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0px;
+  padding: 20px;
+}
+
+.intro-container h1{
+  font-family: 'Trebuchet MS';
+}
+
+.intro-container image{
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+/* General project-card styling */
+project-card {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+  }
+  
+  project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Header styling */
+  project-card header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #f4f4f9;
+    text-align: center;
+  }
+  
+  project-card header img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  project-card h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  project-card .date {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 6px;
+  }
+  
+  /* Section styling */
+  project-card section {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  project-card section p {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  project-card .project-link {
+    font-size: 1.2rem;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  project-card .project-link:hover {
+    color: #005fa3;
+    text-decoration: underline;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    project-card {
+      max-width: 100%;
+      margin: 10px;
+    }
+  }
+  
