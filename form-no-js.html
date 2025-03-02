@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/624ee0938f.js" crossorigin="anonymous"></script>
+    <style>
+        .error-Message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+
+        input:invalid ~ .error-Message,
+        textarea:invalid ~ .error-Message {
+            display: block;
+        }
+
+        input:valid ~ .error-Message,
+        textarea:valid ~ .error-Message {
+            display: none;
+        }
+
+        input:invalid, textarea:invalid {
+            border-color: red;
+        }
+    </style>
 </head>
 <body>
     
@@ -128,6 +149,7 @@
                         </p>
                     </div>
                 </article>                           
+
         </section>
 
         <!-----------Contact--------------> 
@@ -153,11 +175,18 @@
                 </article>
 
                 <form action="https://httpbin.org/post" method="POST" class="contact-form">
-                    <input type="text" name="Name" placeholder="Your Name" required  minlength="2" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" id="" rows="10" placeholder="Your Message" required minlength="10" maxlength="500"></textarea>
-
-                    <input type="hidden" name="possible_bot" value="true">
+                    <div class="input-container">
+                        <input type="text" name="Name" placeholder="Your Name (required)" required minlength="2" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
+                        <p class="error-Message">Please enter a valid name with only letters and spaces.</p>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" placeholder="Your Email (required)" required>
+                        <p class="error-Message">Please enter a valid email address.</p>
+                    </div>
+                    <div class="input-container">
+                        <textarea name="Message" rows="10" placeholder="Your Message (min 10 characters)" required minlength="10" maxlength="500"></textarea>
+                        <p class="error-Message">Please enter a message of at least 10 characters.</p>
+                    </div>
 
                     <button type="submit">Submit</button>
                 </form>
@@ -170,11 +199,5 @@
         </footer>
 
     </main>
-
-
-
-
-
-
 </body>
 </html>

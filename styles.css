@@ -1,9 +1,30 @@
   /* -----------General Formatting----------- */
 
   :root{
+    --error-color: red;
+    --switch-color: #fff;
+    --fill-color: #1a316e;
+    --nav-color: #6495ED;
+    --intro-color: #6495ED;
     --primary-color: #6495ED;
     --secondary-color: #ffff;
+    --background-color: #ffff;
     --font-size: 1rem;
+    --bunny-background: url(images/rabbit\ wallpaper-pc.JPG);
+    --bunny-helene-background: url(images/bunny_helene1.png);
+    --bird-background: url(images/bird\ wallpaper\ pc.jpg);
+  }
+
+  .darkmode{
+    --fill-color: #f0cc1f;
+    --nav-color: #fff;
+    --intro-color: #1a316e;
+    --primary-color: #1a316e;
+    --secondary-color: #fff;
+    --background-color: #818181;
+    --bunny-background: url(images/dark\ rabbit\ wallpaper-pc.jpg);
+    --bunny-helene-background: url(images/dark_bunny_helene1.jpg);
+    --bird-background: url(images/dark\ bird\ wallpaper\ pc.jpg);
   }
 
   * {
@@ -19,15 +40,59 @@
     display: none;
   }
 
+
+  #light-dark-toggle{
+    display: none;
+    height: 3.5em;
+    width: 3.5em;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--switch-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 3%;
+    top: -10%;
+    opacity: 70%;
+    border: 0;
+
+    &:hover{
+      opacity: 100%;
+      animation: none;
+      transition: none;
+
+    }
+
+    svg{
+      fill: var(--fill-color)
+    }
+
+    svg:last-child{
+      display: none;
+    }
+  }
+
+  .darkmode #light-dark-toggle svg:first-child{
+    display: none;
+  }
+
+  .darkmode #light-dark-toggle svg:last-child{
+    display: block;
+  }
+
+
+
+
   button {
     display: block;
     margin: 8% auto;
-    border: 2px solid cornflowerblue;
+    border: 2px solid var(--primary-color);
     padding: 1.5% 4%;
     border-radius: 6px;
     font-size: 3dwh;
     color: var(--primary-color, cornflowerblue);
-    background-color: var(--secondary-color, white);
+    background-color: var(--background-color, white);
     transition: 0.5s;
 
     a {
@@ -67,7 +132,7 @@
     margin: 0;
     display: flex;
     flex-direction: column; 
-    background-color: var(--secondary-color, white);
+    background-color: var(--background-color, white);
     color: var(--primary-color, cornflowerblue);
     width: 100%;
     cursor: url('resources/cursor.cur'), auto;
@@ -93,7 +158,7 @@
   header{
     width: 100dvw;
     height: 100dvh;
-    background-image: url(images/rabbit\ wallpaper-pc.JPG);
+    background-image: var(--bunny-background);
     background-position: center;
     background-size: cover;
     color:var(--secondary-color, white);
@@ -111,7 +176,7 @@
     white-space: nowrap;
 
     a {
-      color: var(--secondary-color, white);
+      color: var(--nav-color, white);
       text-decoration: none;
       margin: 1vw;
 
@@ -140,7 +205,7 @@
   }
 
   span {
-    color: var(--primary-color, cornflowerblue);
+    color: var(--intro-color, cornflowerblue);
     font-weight: bolder;
   }
 
@@ -227,7 +292,7 @@
     padding-bottom: 5%;
     padding-left: 10%;
     width: 100dvw;
-    background-image: url(images/bunny_helene1.png);
+    background-image: var(--bunny-helene-background);
     background-position: center;
     background-size: cover;
   }
@@ -294,7 +359,7 @@
     margin: 0vh .75vw;
     padding: 1.5vw;
     box-shadow: 0 0.5rem 1rem -0.25re, var(--secondary-color, white);
-    background: rgb(121, 146, 201);
+    background: var(--primary-color);
     color: var(--secondary-color, white);
     display: flex;
     border-radius: 15%;
@@ -407,11 +472,11 @@
     display: inline-block;
     width: 100dvw;
     height: 100dvh;
-    background-image: url(images/bird\ wallpaper\ pc.jpg);
+    background-image: var(--bird-background);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color:var(--secondary-color, white);
+    color: var(--secondary-color, white);
   }
 
 
@@ -486,26 +551,28 @@
     margin: 2dvh 0px;
     color: var(--primary-color, cornflowerblue);
     border-radius: 1cap;
+    background-color: var(--secondary-color);
+    opacity: 80%;
 
   }
 
   form input::placeholder, form textarea::placeholder{
-    color: color(display-p3 0.3 0.6 1);
+    color: var(--primary-color);
     opacity: 50%;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: bolder;
   }
 
   .error-message {
     visibility: hidden;
     height: 1.2em; /* Adjust as needed */
-    opacity: 100%;
-    color: white; 
+    opacity: 50%;
+    color: var(--error-color); 
 }
 
   #charCount {
     font-size: .8em;
-    color: white;
+    color: var(--secondary-color);
     text-align: left;
     display: block;
     width: 90%;
@@ -665,7 +732,8 @@
 
 
   #contact{
-    height: 100dvh;
+    height: 100%;
+    width: 100%;
   }
 
   .contact-col-1 {
@@ -694,6 +762,7 @@
       
       a {
         text-decoration: none;
+        opacity: 80%;
       }
 
       i{
@@ -715,6 +784,7 @@
 
     text {
       color: var(--secondary-color, white);
+      opacity: 80%;
     }
   }
 
