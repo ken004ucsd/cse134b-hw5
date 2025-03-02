@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/624ee0938f.js" crossorigin="anonymous"></script>
-    <script src="form-validation.js" defer></script>
 </head>
 <body>
     
@@ -61,7 +60,7 @@
                     </p>
                         <h2>Education</h2>
                     <ul>
-                        <li><span>University of California, San Diego</span><br> Bachelors of Science in Computer Science</li>
+                        <li><span>University of California, San Diego</span><br> Bachelors of Science in Computer Scienece</li>
                     </ul>
                 </article>
             </article>
@@ -150,19 +149,17 @@
                         </a>
                     </address>
 
-                     <button type="download"> <a href="/cse134b-hw3/resources/RESUME.pdf" download >Download CV</a> </button>
+                     <button> <a href="/cse134b-hw3/resources/RESUME.pdf" download >Download CV</a> </button>
                 </article>
 
                 <form action="https://httpbin.org/post" method="POST" class="contact-form">
-                    <input type="text" name="Name" placeholder="Your Name" required title="Only letters and spaces allowed">
+                    <input type="text" name="Name" placeholder="Your Name" required  minlength="2" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" id="" rows="10" placeholder="Your Message" required minlength="10" maxlength="500"></textarea>
-                    <p id="errorMsg" class="error-message"></p>
+
                     <input type="hidden" name="possible_bot" value="true">
-                    <input type="hidden" name="form-errors" id="formErrors">
 
                     <button type="submit">Submit</button>
-                    
                 </form>
             </div>
         </section>
