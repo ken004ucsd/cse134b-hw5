@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/624ee0938f.js" crossorigin="anonymous"></script>
     <script src="form-validation.js" defer></script>
     <script src="darkmode.js" defer></script>
+    <script src="project-card.js" defer></script>
+    
     <noscript>
         <style>
             #light-dark-toggle { display: none; }
@@ -107,36 +109,12 @@
 
         <!-----------Projects--------------> 
 
-        <section id="projects">
-                <article id="pantrypal">
-                    <picture class="image-wrapper">
-                        <img class="project-img" src="images/food-display.jpg" alt="PantryPal" loading="lazy">
-                    </picture>
-                    <div id="pantrypal-content">
-                        <h1> PantryPal</h1>
-                        <h2> Full Stack App Development</h2>
-                        <p>
-                            An application to help users find recipes based on available ingredients.
-                        </p> 
-                    </div>
-                </article>
-                
-                    
-                <article id="pacific-links">
-                    <picture class="image-wrapper">
-                        <img class="project-img" src="images/pacific-links.png" alt="PAXU:Building Bridges" loading="lazy">
-                    </picture>
-                    <div id="pacific-links-content">
-                        <h1> Pacific Links Outreach</h1>
-                        <h2> Web & UI/UX Design</h2>
-                        <p>
-                            A website developed in collaboration with Pacific Links Foundation to provide culturally sensitive educational resources and mental health support
-                                for vulnerable Vietnamese communities.
-                        </p>
-                    </div>
-                </article>                           
-        </section>
-
+        <div id="load-buttons">
+            <button id="load-local">Load Local</button>
+            <button id="load-remote">Load Remote</button>
+        </div>
+        <section id="projects"></section>
+        
         <!-----------Contact--------------> 
         
         <section id="contact">

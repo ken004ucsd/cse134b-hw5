@@ -392,77 +392,21 @@
 
   /* -----------Project----------- */
 
-  #projects {
-    width: 100%;
-    margin-top: 5%;
-    justify-content: center;
-
-    h1 {
-      font-size: 2.5vw;
-      font-weight: bolder;
-      width: 40rem;
-      margin-bottom: 4%;
-    }
-
-    h2 {
-      font-size: 1.2vw;
-      font-weight: bold;
-      width: 40rem;
-      margin-bottom: 1%;
-    }
-
-    p {
-      font-size: 0.75vw;
-      max-width: 40rem;
-      word-wrap: break-word;
-    }
-
-    picture {
-      display: block;
-      border-radius: 10%;
-    }
-  }
-
-  .image-wrapper {
-    overflow: hidden;
+  #load-buttons {
     display: flex;
     justify-content: center;
-    border-radius: 10%;
-    width: 30%;
-    min-width: 30%;
+}
+
+
+  #load-local, #load-remote {
+    animation: none;
+    transition: none;
   }
 
-  .project-img{
-    width: 100%;  
-    height: auto; 
-    object-fit: contain;
-    display: block; 
-    border-radius: 10%;
-    
+  #load-local:hover, #load-remote:hover {
+    animation: none;
+    transition: background-color 0.3s;
   }
-
-  .project-img:hover{
-    transform: scale(1.15);
-    transition: transform 0.5s ease-in-out;
-  }
-
-
-  #pantrypal, #pacific-links{
-    display: flex;
-    gap:8%;
-    justify-content: left;
-    margin-bottom: 5%;
-    margin-left: 20%;
-  }
-
-  #pantrypal-content, #pacific-links-content{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
-  }
-
-
 
   /* --------------- Contact ---------------------*/
 
@@ -671,63 +615,6 @@
 
   .scroller{
     display: none;
-  }
-
-  #projects {
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-
-    h1 {
-      font-size: 1em;
-      font-weight: bolder;
-      width: 40rem;
-      margin-bottom: 4%;
-    }
-
-    h2 {
-      font-size: 1.2em;
-      font-weight: bold;
-      width: 40rem;
-      margin-bottom: 1%;
-    }
-
-    p {
-      font-size: 0.75em;
-      max-width: 100%;
-      word-wrap: break-word;
-    }
-
-    picture {
-      display: block;
-      width: 100%;
-      border-radius: 10%;
-      margin-bottom: 5%;
-    }
-  }
-
-  #pantrypal, #pacific-links{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-
-  }
-
-  #pantrypal-content, #pacific-links-content{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-    margin-bottom: 5%;
-  }
-
-  .project-img{
-    width: 20em;
-  }
-
-  .project-img:hover{
-    transform: none;
   }
 
 

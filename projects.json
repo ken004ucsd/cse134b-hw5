@@ -1,0 +1,16 @@
+[
+    {
+        "image": "images/food-display.jpg",
+        "title": "PantryPal",
+        "subtitle": "Full Stack App Development",
+        "description": "An application to help users find recipes based on available ingredients.",
+        "link": "docs/PantryPal Project Documentation.pdf"
+    },
+    {
+        "image": "images/pacific-links.png",
+        "title": "Pacific Links Outreach",
+        "subtitle": "Web & UI/UX Design",
+        "description": "A website developed with Pacific Links Foundation to support Vietnamese communities.",
+        "link": "docs/PAXU Documentation.pdf"
+    }
+]
