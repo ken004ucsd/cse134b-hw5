@@ -1,6 +1,6 @@
 # CSE134-Portfolio-Website
 
-**Part 4: Enchancements**
+**Part 3: Enchancements**
 
 I added project documentation to the read more section so that the project cards are a real portfolio of the things i have done. If you clcik on them you'll open pdfs for project documentation  <br />
 
