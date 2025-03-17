@@ -137,10 +137,10 @@
                      <button type="download"> <a href="/cse134b-hw3/resources/RESUME.pdf" download >Download CV</a> </button>
                 </article>
 
-                <form action="https://httpbin.org/post" method="POST" class="contact-form">
+                <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
                     <input type="text" name="Name" placeholder="Your Name    (required)" required title="Only letters and spaces allowed" autocomplete="off">
                     <input type="email" name="email" placeholder="Your Email    (required)" required>
-                    <textarea name="Message" id="" rows="10" placeholder="Your Message    (min 10 characters)" required minlength="10" maxlength="500"></textarea>
+                    <textarea name="Message" id="message" rows="10" placeholder="Your Message    (min 10 characters)" required minlength="10" maxlength="500"></textarea>
                     <output id="errorMsg" class="error-message"></output>
                     <input type="hidden" name="possible_bot" value="true">
                     <input type="hidden" name="form-errors" id="formErrors">
@@ -149,6 +149,23 @@
                     
                 </form>
             </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                        Host : "s1.maildns.net",
+                        Username : "nke.3378@gmail.com",
+                        Password : "neb844Viq",
+                        To : 'nke.3378@gmail.com',
+                        From : document.getElementByName("email").value,
+                        Subject : "New Contact Form Inquiry",
+                        Body : "Name: " + document.getElementsByName("Name").value + "<br> Email: " + document.getElementByName("email").value +
+                        "<br> Message: " + document.getElementById("message").value
+                    }).then(
+                    message => alert("Message Sent Successfully")
+                    ); 
+                }
+            </script>
         </section>
 
         <footer>
